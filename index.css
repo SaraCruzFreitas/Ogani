@@ -8,7 +8,7 @@ a{
     text-decoration: none;
     list-style: none;
 }
-#header {
+#header{
     width: 100%;
     height: 7vh;
     padding-top: 11px;
@@ -19,71 +19,153 @@ a{
 #header div {
     display: inline-block;
 }
-#direita ul li {
+#header svg i{
+    padding-right: 12px;
+    height: 14px;
+}
+#right ul li{
     list-style: none;
     display: inline-block;
     color: #1c1c1c;
     padding-left: 60px;
     font-size: 14px;
 }
-#esquerda{
+#left{
     padding-left: 239px;
 }
-#esquerda ul li {
+#left ul li{
     display: inline-block;
     color: #1c1c1c;
     font-size: 14px;
     padding-left: 10px;
 }
-#header svg i{
-    padding-right: 12px;
-    height: 14px;
-}
-#main {
+#main{
     display: grid;
     grid-template-columns: 1fr 2fr 6fr 1fr;
     grid-template-rows: 15vh 15vh 60vh;
 }
-#logo {
+#logo{
     grid-column: 2;
     padding-top: 20px;
     padding-left: 3;           
 }
-#nav {
+#nav{
     grid-column: 3;
 }
-#menu { 
+.reactive-word {
+    color: #333;
+    transition: color 0.3s; 
+}
+.reactive-word-white{
+    color: #ffffff;
+    transition: color 0.3s; 
+}
+.reactive-word:hover {
+    color: #7fad39;
+}
+.reactive-word-white:hover {
+    color: #7fad39;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.color{
+    color: #f0f0f0;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown:hover.dropdown-content {
+  display: block;
+}            
+#menu{ 
     grid-column: 2;
     grid-row: 2/4 ;
 }
-#menu p { 
+#menu p{ 
     font-size: 18px;
     font-weight: 700;
     color: #ffffff;
 }
-#busca { 
+#menu label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#menu a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+#green {
+    visibility: hidden;
+    position: absolute;
+}
+#green:checked + label + .list{
+    display: block;
+}
+.all{
+    width: 70%;
+    margin: auto;
+    height: 300px; 
+}
+.list{
+    display: none;
+    list-style-type: none;
+}
+#found { 
     grid-column: 3;
     grid-row: 2;
 }
-#busca1{
+#founds{
     width: 70%;
     border:solid 1px  #e0dfdf;
     display: inline-block;
 }
-#busca ul{
+#found ul{
     list-style: none;   
 }
-#busca ul li {
+#found ul li {
     display: inline-block;
 }
-#busca div {
+#found div {
     width: 100%;
     display: inline-block;
     position: relative;
     margin: 0;
     padding: 0;
 }
-#fwq{
+.gray{
+    color: #b2b2b2;
+    font-size: 20px;
+    padding-left: 5%;
+}
+#thing{
     border: none;
     height: 8vh;
     font-size: 16px;
@@ -91,7 +173,7 @@ a{
     padding-left: 3%;
     display: inline-block; 
 }
-#busca1 button{
+#founds button{
     width: 200%;
     height: 8vh;
     font-size: 14px;
@@ -102,26 +184,14 @@ a{
     border: none;
     display: inline-block;
 }
-.borda {
-    border-radius: 80%;
-    background-color: #f5f5f5;
-    height: 45px;
-    width: 45px;
-    padding: 14px;
-}
-.cinza{
-    color: #b2b2b2;
-    font-size: 20px;
-    padding-left: 5%;
-}
-.preto{
+.space{
     color: #1c1c1c;
     font-weight: bolder;
     border: 0;
     font-size: 20px;
     padding-left: 3%;
 }
-#telefone ul li{
+#phone ul li{
     display: inline-block;
 }
 #banner { 
@@ -154,7 +224,7 @@ a{
     width: 23%;
 }
         
-.Tverde{
+.Tgreen{
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 4px;
@@ -162,7 +232,7 @@ a{
     margin-bottom: 2%;
 }
             
-.Tcinza{
+.Tgray{
     font-size: 16px;
     font-family: "Cairo", sans-serif;
     color: #6f6f6f;
@@ -186,20 +256,20 @@ svg {
 #nav svg {
     padding-left: 10px;
 }
-.carrosel1 div {
+.mozaico div {
     padding-right: 15px;
     padding-left: 15px;
     position: relative;
     display: inline-block;
 }
-.carrosel1{
+.mozaico{
     height: 70vh;
     padding-top: 5%;
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
     grid-template-rows: 50vh 20vh;
 }
-.carrosel1 div a {
+.mozaico div a {
     width: 200px;
     font-size: 18px;
     color: #1c1c1c;
@@ -218,13 +288,13 @@ svg {
     display: block;
     text-align: center;
     }
-#produto{
+#product{
     display: grid;
     grid-template-columns: 1fr 2fr 2fr 2fr 2fr 1fr;
     grid-template-rows: 15vh 8vh  40vh 5vh 12vh  40vh 5vh 20vh;
     column-gap: 1%;
 }
-#texto{
+#title{
     grid-column: 1/7;
     grid-row: 1;
     color: #1c1c1c;
@@ -234,10 +304,10 @@ svg {
     font-size: 40px;
     text-align: center;     
 }
-#legenda{
+#subtitle{
     text-decoration: white;
 }
-.verdinho{
+.lgreen{
     left: 0;
     right: 0;
     bottom: 50px;
@@ -247,7 +317,7 @@ svg {
     content: "";
     margin: 0 auto;          
 }
-#sumario{
+#list{
     grid-column: 1/7;
     grid-row: 2;
     list-style: none;
@@ -258,27 +328,27 @@ svg {
     text-align: center;
     color:black;
 }
-#sumario li{
+#list li{
     padding-left: 5%;
 }
-.legenda{
+.subtitled{
     color:black;
     text-decoration: white;
     padding-left: 13%;
     padding-top: 5%;
     font-family: "Cairo", sans-serif;
 }
-.preco{
+.money{
     color:black;
     padding-left: 23%;
     padding-top: 5%;
     font-family: "Cairo", sans-serif;
     font-weight: bolder;
 }
-.imagen1{
+.picture{
     height: 40vh;
 }
-#sumario li:hover{
+#mozaico li:hover{
     text-decoration: underline;
     text-decoration-color: #7fad39;
     height: 2px;
@@ -289,31 +359,47 @@ svg {
     grid-template-rows: 5vh 50vh 5vh;
     text-align: center;
 }
-#rodatorio{
-display: grid;
-grid-template-columns: 1fr 3fr 3fr  3fr 1fr;
-grid-template-rows: 10vh  20vh   20vh   20vh 15vh;
-row-gap: 3%;
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
-.titulo{
-    font-weight: 900;       
-    color: #1c1c1c;
-    font-size: 26px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: leff;
+.flex {  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-#rodatorio img {
-    height: 20vh;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    grid-template-rows: 90px;
 }
-.imagensRD{
-    display: inline-block;
+.grid div img {
+    width: 100%;
+    height: 100%;
 }
-.imagensRD h6{
-    text-align: center;
-    font-weight: 400;
-    font-size: 16px;
-    overflow: hidden;
-    display: block;
+.square {
+    height: 20px;
+    width: 20px;
+}
+.products button {
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+.products svg {
+    height: 10px;
+}
+.grid3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.grid3 div {
+    display: flex;
+    padding: 10px;
+    align-items: center;
 }
 #blog{
     height: 110vh;
@@ -323,7 +409,7 @@ row-gap: 3%;
     column-gap: 2%;
     row-gap: 1%;
 }
-#texto2{
+#text2{
     grid-column: 1/5;
     grid-row: 1;
     color: #1c1c1c;
@@ -334,23 +420,23 @@ row-gap: 3%;
     text-align: center;     
 }
 .imagen2{
-height: 43vh;
-column-gap: 50%;
+    height: 43vh;
+    column-gap: 50%;
 }
-#legendaC{
+#lblC{
     font-family: Georgia, 'Times New Roman', Times, serif ;
     color: #b2b2b2;
     font-weight: lighter;
     font-size: 16px;
     padding-top: 5%;
 }
-#legenda{
+#lbl{
     font-size: 20px;
     color: #1c1c1c;
     font-weight: 700;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;;
 }
-#lengendaF{
+#lblF{
     font-family:  Arial, sans-serif;;
     color: #6f6f6f;
     font-weight: 400;
@@ -365,15 +451,15 @@ footer{
     list-style: none;
     font-family:  Arial, sans-serif;
 }
-#espaco{
+#void{
     grid-column: 6;
     grid-row: 1/7 ;
 }
-#espaco2{
-grid-column: 1;
-grid-row: 1/7 ;
+#void2{
+    grid-column: 1;
+    grid-row: 1/7 ;
 }
-#espaco3{
+#void3{
     grid-column: 2/6;
 }
 #uselinks{
@@ -433,100 +519,3 @@ grid-row: 1/7 ;
 #subscrise input{
     width: 60%; 
 }
-.list{
-    display: none;
-    list-style-type: none;
-}
-#verde:checked + label + .list{
-    display: block;
-}
-.todos{
-    width: 70%;
-    margin: auto;
-    height: 300px; 
-}
-#verde:checked + label + .list{
-    display: block;
-}
-#menu {
-    background-color: #f0f0f0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    width: 250px;
-}
-  #menu label {
-    font-weight: bold;
-    margin-bottom: 10px;
-    display: block;
-}
-#menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-#menu a {
-    text-decoration: none;
-    color: #337ab7;
-}
-#verde {
-    visibility: hidden;
-    position: absolute;
-}
-.letras li:hover{
-    text-decoration: none;
-    color: #23527c;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #111214;
-}
-.reactive-word {
-    color: #333;
-    transition: color 0.3s; 
-}
-.reactive-word:hover {
-    color: #7fad39;
-}
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: black;
-    min-width: 160px;
-    z-index: 1;
-}
-.dropdown-content a {
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.color{
-    color: #f0f0f0;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-.dropdown:hover.dropdown-content {
-  display: block;
-}            
